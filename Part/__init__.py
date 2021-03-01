@@ -17,7 +17,7 @@ def create_app():
     app.config['SECRET_KEY'] = 'Part'
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    from login.views import bp
+    from Part.views import bp
     app.register_blueprint(bp)
     db.init_app(app)
     migrate.init_app(app, db)

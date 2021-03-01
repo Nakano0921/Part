@@ -1,4 +1,4 @@
-from login import create_app
+from Part import create_app
 
 app = create_app()
 
